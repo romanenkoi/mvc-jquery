@@ -1,24 +1,18 @@
 package com.romanenko.service;
 
-import com.romanenko.domain.Role;
-import com.romanenko.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
+import com.romanenko.entity.Role;
+import com.romanenko.entity.User;
 
 import java.util.UUID;
 
 /**
- * Service for initializing MongoDB with sample data using {@link MongoTemplate}
+ * Service for initializing MongoDB with sample data using {@link }
  */
-public class InitMongoService {
+public class InitDBService {
 	
-	@Autowired
-	private MongoTemplate mongoTemplate;
 
 	public void init() {
 		// Drop existing collections
-		mongoTemplate.dropCollection("role");
-		mongoTemplate.dropCollection("user");
 
 		// Create new records
 		Role adminRole = new Role();
@@ -46,9 +40,5 @@ public class InitMongoService {
 		jane.setUsername("jane");
 		
 		// Insert to db
-		mongoTemplate.insert(john, "user");
-		mongoTemplate.insert(jane, "user");
-		mongoTemplate.insert(adminRole, "role");
-		mongoTemplate.insert(userRole, "role");
 	}
 }

@@ -35,6 +35,9 @@
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.6.1" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.3" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.3" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.17" />
+          <element id="library" level="project" name="Maven: com.jolbox:bonecp:0.8.0-rc3" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
         </element>
       </element>
     </root>

@@ -14,18 +14,26 @@
 			http://www.springframework.org/schema/util
 			http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 
-	<context:property-placeholder properties-ref="deployProperties" />
 
-	<!-- Activate Spring Data MongoDB repository support -->
-  	<mongo:repositories base-package="org.krams.repository" />
-  	
-  	<!-- MongoDB host -->
-	<mongo:mongo host="${mongo.host.name}" port="${mongo.host.port}"/>
 
-	<!-- Template for performing MongoDB operations -->
-  	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate" 
-  			c:mongo-ref="mongo" c:databaseName="${mongo.db.name}"/>
+
+    <context:property-placeholder location="/WEB-INF/spring.properties" />
+
+    <!-- BoneCP configuration -->
+    <bean id="mainDataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+        <property name="driverClass" value="${jdbc.driverClassName}" />
+        <property name="jdbcUrl" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="mainDataSource"/>
+    </bean>
 	
-	<!-- Service for initializing MongoDB with sample data using MongoTemplate -->
-	<bean id="initMySQLService" class="com.romanenko.service.InitMongoService" init-method="init"/>
+	<!-- Service for initializing DB -->
+	<!--<bean id="initMySQLService" class="com.romanenko.service.InitDBService" init-method="init"/>
+-->
+
+
 </beans>

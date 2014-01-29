@@ -1,6 +1,6 @@
 package com.romanenko.dto;
 
-import com.romanenko.domain.User;
+import com.romanenko.entity.User;
 
 import java.util.List;
 

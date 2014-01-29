@@ -10,8 +10,9 @@
 	   		http://www.springframework.org/schema/context/spring-context-3.1.xsd
 			http://www.springframework.org/schema/mvc 
 			http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
-			
-	<context:property-placeholder properties-ref="deployProperties" />
+
+
+
 
 	<!-- Activates various annotations to be detected in bean classes -->
 	<context:annotation-config />
@@ -22,17 +23,17 @@
 
 	<!-- Configures the annotation-driven Spring MVC Controller programming model.
 	Note that, with Spring 3.0, this tag works in Servlet MVC only!  -->
-	<mvc:annotation-driven /> 
-	
+	<mvc:annotation-driven />
 	<mvc:resources mapping="/resources/**" location="/resources/" /> 
  	
  	<!-- Imports logging configuration -->
 	<import resource="trace-context.xml"/>
 	
 	<!-- Imports datasource configuration -->
-	<import resource="spring-data.xml"/>
+	<import resource="db_context.xml"/>
+
+    <!--Import business configuration-->
+    <import resource="businessContext.xml"/>
 	
-	<bean id="deployProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean"
-        p:location="/WEB-INF/spring.properties" />
-        
+
 </beans>

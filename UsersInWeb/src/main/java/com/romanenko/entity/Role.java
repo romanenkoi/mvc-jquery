@@ -1,12 +1,10 @@
-package com.romanenko.domain;
+package com.romanenko.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+
 public class Role {
 	
-	@Id
+
 	private String id;
 	
 	private Integer role;

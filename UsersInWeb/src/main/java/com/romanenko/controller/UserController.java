@@ -1,7 +1,7 @@
 package com.romanenko.controller;
 
-import com.romanenko.domain.Role;
-import com.romanenko.domain.User;
+import com.romanenko.entity.Role;
+import com.romanenko.entity.User;
 import com.romanenko.dto.UserListDto;
 import com.romanenko.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

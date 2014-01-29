@@ -1,13 +1,11 @@
-package com.romanenko.domain;
+package com.romanenko.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+
+
 public class User {
 	
-	@Id
+
 	private String id;
 	
 	private String firstName;
@@ -16,7 +14,7 @@ public class User {
 	private String username;
 	private String password;
 	
-	@DBRef
+
 	private Role role;
 
 	public String getId() {
@@ -66,4 +64,8 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+
+    public boolean isNew() {
+        return (this.id == null);
+    }
 }
