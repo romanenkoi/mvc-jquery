@@ -6,8 +6,8 @@ public class Role {
 	
 
 	private String id;
-	
-	private Integer role;
+	private String description;
+    private Integer role;
 	
 	public String getId() {
 		return id;
@@ -21,4 +21,10 @@ public class Role {
 	public void setRole(Integer role) {
 		this.role = role;
 	}
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

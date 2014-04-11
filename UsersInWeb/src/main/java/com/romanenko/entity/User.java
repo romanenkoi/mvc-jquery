@@ -17,7 +17,21 @@ public class User {
 
 	private Role role;
 
-	public String getId() {
+	public User (){
+
+    }
+
+    public User(String firstName, String lastName, String username, String password, Role role) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
+
+
+    public String getId() {
 		return id;
 	}
 

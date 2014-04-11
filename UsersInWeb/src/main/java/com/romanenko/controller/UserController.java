@@ -1,5 +1,7 @@
 package com.romanenko.controller;
 
+import com.romanenko.dao.implementation.RoleGetter;
+import com.romanenko.dao.exceptions.DaoException;
 import com.romanenko.entity.Role;
 import com.romanenko.entity.User;
 import com.romanenko.dto.UserListDto;
@@ -16,19 +18,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/users")
 public class UserController {
 
-	@Autowired
+    @Autowired
+    private RoleGetter getter;
+
+    @Autowired
 	private UserService service;
-	
-	@RequestMapping
+
+    public void setService(UserService service) {
+        this.service = service;
+    }
+
+    @RequestMapping
 	public String getUsersPage() {
 		return "users";
 	}
 	
 	@RequestMapping(value="/records")
 	public @ResponseBody UserListDto getUsers() {
-		
+
 		UserListDto userListDto = new UserListDto();
-		userListDto.setUsers(service.readAll());
+		userListDto.setUsers(service.findAll());
 		return userListDto;
 	}
 	
@@ -45,8 +54,13 @@ public class UserController {
 			@RequestParam String lastName,
 			@RequestParam Integer role) {
 
-		Role newRole = new Role();
-		newRole.setRole(role);
+        Role newRole = null;
+        try {
+            newRole = getter.findByRoleId(role.toString());
+        } catch (DaoException e) {
+           //NOP
+        }
+
 		
 		User newUser = new User();
 		newUser.setUsername(username);
@@ -65,14 +79,18 @@ public class UserController {
 			@RequestParam String lastName,
 			@RequestParam Integer role) {
 
-		Role existingRole = new Role();
-		existingRole.setRole(role);
+        Role newRole = null;
+        try {
+            newRole = getter.findByRoleId(role.toString());
+        } catch (DaoException e) {
+            //NOP
+        }
 		
 		User existingUser = new User();
 		existingUser.setUsername(username);
 		existingUser.setFirstName(firstName);
 		existingUser.setLastName(lastName);
-		existingUser.setRole(existingRole);
+		existingUser.setRole(newRole);
 		
 		return service.update(existingUser);
 	}

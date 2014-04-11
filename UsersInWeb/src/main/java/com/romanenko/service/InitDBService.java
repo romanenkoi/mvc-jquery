@@ -28,7 +28,7 @@ public class InitDBService {
 		john.setFirstName("John");
 		john.setLastName("Smith");
 		john.setPassword("21232f297a57a5a743894a0e4a801fc3");
-		john.setRole(adminRole);
+		//john.setRole(adminRole);
 		john.setUsername("john");
 		
 		User jane = new User();
@@ -36,7 +36,7 @@ public class InitDBService {
 		jane.setFirstName("Jane");
 		jane.setLastName("Adams");
 		jane.setPassword("ee11cbb19052e40b07aac0ca060c23ee");
-		jane.setRole(userRole);
+		//jane.setRole(userRole);
 		jane.setUsername("jane");
 		
 		// Insert to db
