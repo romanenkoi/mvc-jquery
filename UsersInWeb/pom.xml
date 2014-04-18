@@ -170,22 +170,22 @@
 
         <!-- Data Mapper package is a high-performance data binding package built
                 on Jackson JSON processor -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${jackson.version}</version>
             <type>jar</type>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
 
         <!-- Jackson is a high-performance JSON processor (parser, generator) -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>
             <version>${jackson.version}</version>
             <type>jar</type>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
 
         <!-- DB -->
         <dependency>

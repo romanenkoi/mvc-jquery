@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="UsersInWeb:war exploded">
-    <output-path>$PROJECT_DIR$/target/spring-mongodb-tutorial</output-path>
+    <output-path>$PROJECT_DIR$/target/usersinWeb</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="UsersInWeb/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -33,8 +33,6 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.1" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.6.1" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.3" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.3" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.17" />
           <element id="library" level="project" name="Maven: com.jolbox:bonecp:0.8.0-rc3" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />

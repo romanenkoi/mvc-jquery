@@ -1,11 +1,15 @@
-D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\UserStorage.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\service\InitDBService.java
+D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\UserStorage.java
+D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\implementation\mappers\UserMapper.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\controller\UserController.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\entity\Role.java
+D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\implementation\UserStorageImpl.java
+D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\implementation\extractors\UserExtractor.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\service\UserService.java
+D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\RoleDao.java
+D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\implementation\RoleGetter.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\exceptions\NoSuchEntityException.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\aop\TraceInterceptor.java
-D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\UserStorageImpl.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\SpringTest.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\controller\MediatorController.java
 D:\mvc-jquery\UsersInWeb\src\main\java\com\romanenko\dao\exceptions\DaoException.java

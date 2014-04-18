@@ -29,7 +29,7 @@
 		
 		$('#editBtn').click(function() { 
 			if (hasSelected()) {
-				toggleForms('edit');
+				toggleForms('edit');      12
 				toggleCrudButtons('hide');
 				fillEditForm();
 			}

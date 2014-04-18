@@ -9,7 +9,20 @@ public class Role {
 	private String description;
     private Integer role;
 	
-	public String getId() {
+	public Role() {
+        new Role(null, null);
+    }
+    public Role(String description, Integer role){
+        new Role(null, description, role);
+    }
+
+    public Role(String id, String description, Integer role) {
+        this.id = id;
+        this.description = description;
+        this.role = role;
+    }
+
+    public String getId() {
 		return id;
 	}
 	public void setId(String id) {

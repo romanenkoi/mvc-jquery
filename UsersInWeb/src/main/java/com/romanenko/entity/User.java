@@ -1,9 +1,9 @@
 package com.romanenko.entity;
 
 
+import java.io.Serializable;
 
-
-public class User {
+public class User implements Serializable {
 	
 
 	private String id;
@@ -18,11 +18,15 @@ public class User {
 	private Role role;
 
 	public User (){
-
+        new User(null, null, null, null);
     }
 
-    public User(String firstName, String lastName, String username, String password, Role role) {
+    public User(String firstName, String lastName, String username, String password) {
+       new User(firstName, lastName, username, password, null);
+    }
 
+
+    public User(String firstName, String lastName, String username, String password, Role role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
